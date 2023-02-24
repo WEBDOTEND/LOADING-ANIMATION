@@ -1,0 +1,65 @@
+/*CREATED BY MOHAMED AYMAN*/
+/*WEB.END*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    min-height:100vh ;
+ }
+
+/*LOADER*/
+
+.loader{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span{
+    position: relative;
+    height: 125px;
+    width: 125px;
+    background: #eaeef0;
+    border: 3px solid #eaeef0;
+    border-radius: 50%;
+    box-shadow:-8px -8px 15px rgb(29, 28, 28),8px 8px 25px rgba(0,0,0,0.15);
+    overflow:hidden;
+}
+
+span::before{
+    content: '';
+    position: absolute;
+    inset: 20px;
+    background: #eaeef0;
+    border: 1px solid #eaeef0;
+    border-radius: 50%;
+    box-shadow:-4px -4px 13px rgb(255,255,255,1),4px 4px 13px rgba(0,0,0,0.25),inset 1.5px 1.5px 5px rgba(0,0,0,0.1),inset -1px -1px 7.5px rgba(255,255,255,1) ;
+    z-index: 1;
+}
+
+i{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(green,orange,purple);
+    border-radius: 50%;
+    animation: loader 1s linear infinite;
+    filter: blur(5px);
+}
+
+@keyframes loader{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
